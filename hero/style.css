@@ -60,6 +60,41 @@ body {
 	font-size: 2.8rem;
 }
 
+
+.hamburger.menu-open {
+	background: url('images/menu.svg');
+}
+
+.hamburger.menu-close {
+	background: url('images/close.svg');
+}
+
+.hamburger.menu-open,
+.hamburger.menu-close {
+	--menu-width: 36px;
+	display: block;
+	width: var(--menu-width);
+	height: var(--menu-width);
+	background-repeat: no-repeat;
+	background-size: var(--menu-width) var(--menu-width);
+	cursor: pointer;
+	opacity: .8;
+	transition: all .3s;
+}
+
+.hamburger.menu-open:hover,
+.hamburger.menu-close:hover {
+	opacity: 1;
+}
+
+#nav {
+	display: none;
+}
+
+#nav.nav-open {
+	display: block;
+}
+
 #top-nav {
 	display: flex;	
 }
@@ -138,4 +173,3 @@ section.content {
 	max-width: var(--max-width);
 	margin: 0 auto;
 }
-
