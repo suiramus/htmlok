@@ -8,15 +8,18 @@
 </head>
 <body>
 
+
+
 <header id="header">
 	<div class="header-wrap">
 		<div class="logo">
 			<h1>Company Training</h1>
 		</div><!-- logo -->
-		<div class="hamburger menu-open">
-			
+		<div id="hamburger" class="menu-open">
+		<!-- <div class="hamburger menu-close"> -->
 		</div><!-- hamburger -->
-		<nav id="nav" class="">
+		<nav id="nav">
+			<!-- <ul id="top-nav"> -->
 			<ul id="top-nav">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Services</a></li>
@@ -27,6 +30,18 @@
 		</nav>
 	</div><!-- header-wrap -->
 </header>
+
+<script type="text/javascript">
+	let nav = document.getElementById('nav');
+	let hamburger = document.getElementById('hamburger'); 
+	hamburger.addEventListener('click', function(){
+		// ul#menu add class .menu-active [ul#menu.menu-active]
+		nav.classList.toggle('nav-open');
+		// change menu icon from menu-bars.svg to menu-close.svg (in CSS background)
+		hamburger.classList.toggle('menu-open');
+		hamburger.classList.toggle('menu-close');
+	});
+</script>
 
 <section id="hero">
 	<div class="hero-wrap">
@@ -51,6 +66,8 @@
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Neque maiores rem praesentium sed. Vitae, eveniet aliquam modi incidunt deserunt officiis, veniam animi voluptates eaque mollitia, aspernatur pariatur beatae velit excepturi quasi earum autem est blanditiis odio quis recusandae, non facere? Beatae eveniet natus nisi optio dolor sapiente maiores nobis non fugit, a totam! Adipisci, ullam ipsa laudantium deserunt nisi obcaecati quidem molestiae, aliquam vero excepturi ipsum assumenda voluptatibus, minus commodi soluta quaerat quisquam illo. Excepturi porro quod consequuntur culpa repellat nulla accusamus impedit nam alias, neque, quam, non nesciunt odit? Molestiae aliquam autem ex, earum dolorum dolores itaque quos facere?</p>
 	</div><!-- wrapper -->
 </section>
+
+
 
 </body>
 </html>
