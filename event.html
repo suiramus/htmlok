@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Event</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	#ham {
+		color: black;
+	}
+
+	#ham.close {
+		color: red;
+	}
+
+	#menu a {
+		color: green;
+	}
+
+	#menu.active a {transition: all .3s;}
+
+	#menu {
+		background: rgba(0, 0, 0, .2);
+		transition: all .3s;
+		display: block;
+		max-width: 400px;
+	}
+
+	#menu.active {
+		background: rgba(0, 0, 0, .7);
+		color: #fff;
+	}
+
+	#menu.active a {
+		color: #FFF;
+	}
+</style>
+
+
+</head>
+<body>
+
+
+<a id="ham" href="#">Ham</a>
+
+<ul id="menu">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Services</a></li>
+	<li><a href="#">Products</a></li>
+	<li><a href="#">Contact</a></li>
+</ul>
+
+<br>
+
+<a href="#" class="another">Deschide meniul</a>
+
+<br>
+
+<p id="para" onclick="hamMenu()">Hamburger menu</p>
+
+<script>
+	let ham = document.getElementById("ham");
+	let menu = document.getElementById("menu");
+	let anotherx = document.querySelector('.another');
+	let anotherxText = anotherx.innerText;
+
+
+	ham.addEventListener('click', hamMenu);
+	anotherx.addEventListener('click', hamMenu);
+
+	function hamMenu() {
+		ham.classList.toggle("close");
+		menu.classList.toggle("active");
+
+		if (anotherx.innerText == "Inchide meniul") {
+			anotherx.innerText = anotherxText;
+		} else {
+			anotherx.innerText = "Inchide meniul";
+		}
+	} //hamMenu
+
+</script>
+
+
+</body>
+</html>
