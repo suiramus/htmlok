@@ -9,6 +9,7 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.4;
+	color: #333;
 }
 
 #header {
@@ -25,24 +26,39 @@ body {
 }
 
 #logo,
-#ham,
-#nav {
-	padding: 0 20px;
+#ham {
+	padding: 20px;
 }
 
-#logo,
-#ham {
-	padding-top: 20px;
-	padding-bottom: 20px;
+#logo {
+	font-weight: bold;
+	font-size: 24px;
 }
 
 #ham {
 	display: none;
+	margin-right: 20px;
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	background: url('icons/ham.svg');
+	background-repeat: no-repeat;
+	background-size: 36px;
+	background-position: center;
+	cursor: pointer;
+}
+
+#ham.ham-close {
+	background: url('icons/close.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 36px;
 }
 
 #top-menu {
 	list-style: none;
 	padding: 0;
+	padding-right: 10px;
 	margin: 0;
 	display: flex;
 }
@@ -64,20 +80,21 @@ body {
 	#nav {
 		display: none;
 		width: 100%;
-		padding-left: 10px;
-		background: rgba(0, 0, 0, .2);
-		padding: 0;
+		background: rgba(0, 0, 0, .1);
+	}
+
+	#nav.nav-open { /*Add class in JS*/
+		display: block;
 	}
 
 		#top-menu {
 			flex-wrap: wrap;
 			flex-direction: column;
+			padding-right: 0;
 		}
 
 		ul#top-menu {
-			padding-top: 0;
-			padding-bottom: 0;
-			margin: 0;
+
 		}
 
 		#top-menu li {
@@ -86,20 +103,16 @@ body {
 		}
 
 		#top-menu a {
-			padding: 14px 20px;
+			padding-left: 20px;
 		}
 
 		#top-menu a:hover {
-			background: rgba(0, 0, 0, .8);
-			color: #FFF;
+			background: rgba(0, 0, 0, .1);
 		}
 
 	#ham {
 		display: block;
 	}
 
-	#nav.nav-open { /*Add class in JS*/
-		display: block;
-	}
 
 } /* 1024px media end */
