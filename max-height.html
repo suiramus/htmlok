@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>max-height transition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="style.css">
+<style>
+
+	body {
+		padding: 20px 100px;
+	}
+
+	#box {
+		width: 400px;
+		max-height: 0;
+		overflow: hidden;
+		/*-webkit-transition: max-height 0.5s;
+		-moz-transition: max-height 0.5s;*/
+		transition: max-height 0.7s;
+		background: yellow;
+	}
+
+	#box.open {
+		max-height: 1000px;
+		/*-webkit-transition: max-height 0.5s;
+		-moz-transition: max-height 0.5s;*/
+		transition: max-height 0.7s;
+		/*background: yellow;*/
+	}
+</style>
+</head>
+<body>
+
+<a href="#" id="ham">Click me</a>
+<br>
+<br>
+<div id="box">
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ea odio magnam accusantium reprehenderit qui sequi, debitis? Nostrum debitis, quidem doloribus maxime non fugit suscipit nihil molestias sunt cumque, labore dignissimos nemo, aliquid reprehenderit dolorum iste officia. Consequuntur voluptate aspernatur dicta repellendus laudantium consectetur reiciendis, iste dolor non cum minus labore alias quaerat, incidunt est amet quas. Repudiandae id, dolor eos suscipit magni dignissimos, sint ipsam deleniti ipsum laboriosam distinctio natus ea deserunt dicta rerum in recusandae inventore modi. Voluptatibus, praesentium ipsum sapiente veritatis, perspiciatis vel deleniti ab recusandae fugit delectus dolorem, totam quis? Voluptatibus labore in illum placeat sapiente?
+</div>
+
+<div id="anotherbox" style="margin-top: 30px;">
+	Lorem, ipsum dolor sit amet consectetur, adipisicing elit. At sequi accusamus sint pariatur nesciunt, ad id quis vero sapiente esse aperiam, dignissimos magni suscipit fugiat eius unde voluptate quos. Dolores!
+</div>
+
+<script>
+	let box = document.getElementById("box");
+	let ham = document.getElementById("ham");
+
+	ham.addEventListener('click', openBox);
+	function openBox(e){
+		e.preventDefault();
+		box.classList.toggle('open');
+	}
+</script>
+
+
+</body>
+</html>
