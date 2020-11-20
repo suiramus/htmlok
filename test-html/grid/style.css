@@ -1,0 +1,82 @@
+
+/* 
+	Simple Grid System 
+
+	.container
+		.wrap
+			.row
+				.col
+				.col
+
+*/
+
+:root {
+	--size-large: 1024px;
+	--size-medium: 768px;
+	--size-small: 480px;
+	--lateral-padding: 20px;
+}
+
+.container {
+	max-width: 100%;
+	/*padding: 3rem var(--lateral-padding);*/
+	padding: 3rem 2rem;
+}
+
+.container:nth-of-type(odd) {
+	background: rgba(10, 130, 230, .04);
+}
+
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.row .col {
+	padding: 0 1rem 1rem;
+	/*background: rgba(0, 0, 0, .01);*/
+}
+
+.row.two-cols,
+.row.three-cols,
+.row.four-cols,
+.row.five-cols {
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+
+.row.two-cols .col {
+	max-width: calc(100% / 2);
+}
+
+.row.three-cols .col {
+	max-width: calc(100% / 3);
+}
+
+.row.four-cols .col {
+	max-width: calc(100% / 4);
+}
+
+@media screen and (max-width:768px) {
+
+	.row.two-cols .col {
+		max-width: calc(100% / 1);
+	}
+
+	.row.three-cols .col {
+		max-width: calc(100% / 2);
+	}
+
+	.row.four-cols .col {
+		max-width: calc(100% / 2);
+	}
+
+
+} /*768px media end */
