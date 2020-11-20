@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML5 Test Page</title>
-	<link id="stylesheet" rel="stylesheet" href="styles.css">
+	<link id="stylesheet" rel="stylesheet" href="css/styles.css">
 	<style>
 		.page {
 			max-width: 1200px;
@@ -22,7 +22,7 @@
 
 <script>
 	function changeStyle(url) {
-		document.getElementById('stylesheet').href = url;
+		document.getElementById('stylesheet').href = 'css/' + url;
 		preventDefault();
 	}
 </script>
